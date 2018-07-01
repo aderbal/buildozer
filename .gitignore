@@ -93,3 +93,4 @@ ENV/
 # folders and files
 .vscode/
 .vscode/settings.json
+home.buildozer.tar.gz

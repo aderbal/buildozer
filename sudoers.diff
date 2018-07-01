@@ -1,0 +1,12 @@
+--- sudoers	2018-06-30 20:08:42.387522982 -0300
++++ sudoers.new	2018-06-30 20:29:53.103868890 -0300
+@@ -17,7 +17,8 @@
+ # Cmnd alias specification
+ 
+ # User privilege specification
+-root	ALL=(ALL:ALL) ALL
++root      ALL=(ALL:ALL) ALL
++buildozer ALL=(ALL:ALL) ALL
+ 
+ # Members of the admin group may gain root privileges
+ %admin ALL=(ALL) ALL
