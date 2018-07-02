@@ -14,18 +14,20 @@ RUN set -x \
     && apt-get -y install mlocate nano sudo \
     && apt-get autoremove \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && updatedb
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # The buildozer VM used Cython v0.25 and buildozer v0.32
 RUN set -x \
     && python -m pip install --upgrade pip \
+    && python -m pip install ipython \
     && python -m pip install "cython<0.26" \
     && python -m pip install "buildozer!=0.33" \
     && python -m pip install requests \
     && python -m pip install kivy-garden \
     && python -m pip install python-for-android \
-    && python -m pip install pyOpenssl
+    && python -m pip install pyOpenssl \
+    && python -m pip install pillow \
+    && python -m pip install "zbarlight==1.2"
 
 # zBarCam
 RUN set -x \
